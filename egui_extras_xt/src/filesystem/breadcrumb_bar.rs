@@ -150,7 +150,7 @@ impl<'a> Widget for BreadcrumbBar<'a> {
                     if let Some((context_menu_contents, context_menu_enabled)) =
                         &self.directory_context_menu
                     {
-                        response = response.context_menu(|ui| {
+                        let _context_response = response.context_menu(|ui| {
                             let context_menu_enabled = context_menu_enabled(&path_prefix);
 
                             if context_menu_enabled {
@@ -183,7 +183,7 @@ impl<'a> Widget for BreadcrumbBar<'a> {
                         &self.file_context_menu
                     {
                         if context_menu_enabled(&path_prefix) {
-                            response =
+                           let _context_response =
                                 response.context_menu(|ui| context_menu_contents(ui, &path_prefix));
                         }
                     }

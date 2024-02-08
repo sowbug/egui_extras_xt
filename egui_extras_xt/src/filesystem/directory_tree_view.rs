@@ -225,7 +225,7 @@ impl<'a> DirectoryTreeViewWidget<'a> {
 
         if let Some((add_contents_fn, enabled_fn)) = &self.directory_context_menu {
             if enabled_fn(directory_path) {
-                header_response =
+                let _context_response =
                     header_response.context_menu(|ui| add_contents_fn(ui, directory_path));
             }
         }
@@ -330,7 +330,7 @@ impl<'a> DirectoryTreeViewWidget<'a> {
 
         if let Some((add_contents_fn, enabled_fn)) = &self.file_context_menu {
             if enabled_fn(file_path) {
-                response = response.context_menu(|ui| add_contents_fn(ui, file_path));
+                let _context_response = response.context_menu(|ui| add_contents_fn(ui, file_path));
             }
         }
 
