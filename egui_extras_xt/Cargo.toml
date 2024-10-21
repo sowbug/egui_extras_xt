@@ -15,10 +15,10 @@ publish = false
 maintenance = { status = "as-is" }
 
 [dependencies]
-ecolor = "0.28"
-egui = "0.28"
-emath = "0.28"
-epaint = "0.28"
+ecolor = "0.29.1"
+egui = "0.29.1"
+emath = "0.29.1"
+epaint = "0.29.1"
 itertools = "0.13.0"
 strum = { version = "0.26.3", features = ["derive"] }
 
